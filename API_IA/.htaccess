@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /API_IA/
+
+# Redirige todo lo que venga a index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
